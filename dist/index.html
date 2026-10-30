@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef">
+  <meta name="description" content="Yingchao Li 的个人作品集。FAU 数据科学硕士在读，探索计算机视觉、全栈应用与嵌入式 AI。">
+  <meta property="og:title" content="Yingchao Li — Ideas into working systems">
+  <meta property="og:description" content="Computer vision, full-stack software and embedded AI. Explore projects and experience from Yingchao Li.">
+  <meta property="og:url" content="https://yingchao-li.github.io/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yingchao-li.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Yingchao Li | AI & Software Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="Yingchao Li 首页" data-aria="homeAria"><span class="brand-mark">yl<span>↗</span></span><span>YINGCHAO LI<span class="brand-caption">ENGINEERING PORTFOLIO</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#projects" data-i18n="navProjects">项目</a>
+      <a href="#about" data-i18n="navAbout">关于我</a>
+      <a href="#contact" data-i18n="navContact">联系</a>
+    </nav>
+    <div class="header-actions"><button id="language-switch" class="language-switch" aria-label="Switch to English">EN <span>↗</span></button><a class="header-github" href="https://github.com/yingchao-li" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></div>
+  </header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="heroEyebrow">数据科学 · 计算机视觉 · 软件工程</span></p>
+        <h1 id="hero-title" data-i18n-html="heroTitle">从算法，<br>到<span class="serif-accent">可以使用</span><br>的系统。</h1>
+        <p class="hero-description" data-i18n="heroDescription">你好，我是 Yingchao Li。FAU 数据科学硕士在读，将计算机视觉、机器学习与软件工程连接起来，让想法在真实场景中运行。</p>
+        <div class="hero-buttons"><a href="#projects" class="button button-dark"><span data-i18n="explore">探索我的项目</span><span>↗</span></a><a href="assets/Yingchao-Li-CV.pdf" class="text-link" download><span data-i18n="downloadCv">下载 CV</span><span>↓</span></a></div>
+        <div class="hero-location"><span class="location-icon">⌖</span><span>Nürnberg, Germany</span><span class="small-separator"></span><span>M.Sc. @ FAU</span></div>
+      </div>
+      <div class="hero-lab">
+        <div class="lab-heading"><span><span class="tiny-cross">✳</span> VISION / GEOMETRY</span><span class="lab-number">EXPERIMENT 01</span></div>
+        <div class="lab-visual"><img src="assets/point-cloud.svg" alt="三维点云立方体与平面拟合流程示意" data-alt="cloudAlt" width="540" height="400"><div class="lab-annotation"><span class="status-dot"></span><span data-i18n="labAnnotation">从噪声中，找到结构。</span></div></div>
+        <div class="lab-flow"><div><span class="mono-caption">01 / INPUT</span><strong data-i18n="labInput">深度点云</strong></div><span class="flow-arrow">→</span><div><span class="mono-caption">02 / PROCESS</span><strong>RANSAC</strong></div><span class="flow-arrow">→</span><div><span class="mono-caption">03 / OUTPUT</span><strong data-i18n="labOutput">三维几何</strong></div></div>
+        <p class="lab-footnote" data-i18n="labFootnote">CVKit 几何模块 · 流程示意图</p>
+      </div>
+    </section>
+    <div class="intro-strip container"><p data-i18n="stripTitle">理解原理，也把系统做完整。</p><div><span>Python</span><span>C / C++</span><span>PyTorch</span><span>React</span><span>FastAPI</span><span>ESP32</span></div></div>
+
+    <section class="projects-section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-top"><p class="eyebrow section-index" data-i18n="projectsIndex">01 / 项目精选</p><a class="text-link subtle" href="https://github.com/yingchao-li?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepos">全部 GitHub 仓库</span><span>↗</span></a></div>
+      <div class="section-heading"><h2 id="projects-title" data-i18n-html="projectsTitle">想法，<span class="serif-accent">落地成形。</span></h2><p data-i18n="projectsIntro">从视觉算法到 Web 应用，再到端侧设备。<br>这里是我正在构建和探索的作品。</p></div>
+      <div class="project-filters" role="group" aria-label="项目分类" data-aria="filterAria"><button class="filter active" data-filter="all" aria-pressed="true"><span data-i18n="filterAll">全部项目</span><span class="filter-count">05</span></button><button class="filter" data-filter="vision" aria-pressed="false" data-i18n="filterVision">计算机视觉</button><button class="filter" data-filter="fullstack" aria-pressed="false" data-i18n="filterFullstack">全栈开发</button><button class="filter" data-filter="llm" aria-pressed="false">LLM & RAG</button><button class="filter" data-filter="embedded" aria-pressed="false" data-i18n="filterEmbedded">嵌入式 AI</button></div>
+      <p id="filter-status" class="sr-only" aria-live="polite"></p>
+      <div id="project-grid" class="project-grid"></div>
+      <noscript><p>Explore all five repositories on <a href="https://github.com/yingchao-li?tab=repositories">GitHub</a>. Enable JavaScript to view project filters and bilingual descriptions.</p></noscript>
+      <div class="project-source"><span class="status-dot"></span><span data-i18n="projectSource">项目内容整理自公开仓库 · 更新于 2026 年 10 月</span></div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title"><div class="container">
+      <div class="section-top"><p class="eyebrow section-index" data-i18n="aboutIndex">02 / 关于我</p><span class="mono-caption">A LITTLE CONTEXT</span></div>
+      <div class="about-grid"><div class="about-intro"><h2 id="about-title" data-i18n-html="aboutTitle">保持好奇，<br><span class="serif-accent">动手构建。</span></h2><p data-i18n="aboutDescription">我的计算机科学背景，让我关心系统如何运行；数据科学的学习，则让我更深入地理解模型为何有效。我喜欢在两者之间工作——从实验、评估，到界面、API 和硬件集成。</p><div class="about-note"><span>↳</span><p data-i18n="aboutNote">目前在德国 FAU 攻读数据科学硕士，关注计算机视觉、AI 应用与软硬件协同。</p></div><a class="text-link" href="assets/Yingchao-Li-CV.pdf" target="_blank" rel="noopener"><span data-i18n="readCv">查看完整 CV</span><span>↗</span></a></div>
+        <div class="timeline"><article class="timeline-item"><div class="timeline-date"><span>2025.10 — <span data-i18n="present">至今</span></span><span class="timeline-type" data-i18n="education">教育</span></div><h3 data-i18n="masters">数据科学硕士</h3><p class="timeline-org">Friedrich-Alexander-Universität<br>Erlangen-Nürnberg</p><p class="timeline-detail" data-i18n="mastersDetail">M.Sc. Data Science · Erlangen, Germany</p></article>
+        <article class="timeline-item"><div class="timeline-date"><span>2024.09 — 2025.03</span><span class="timeline-type" data-i18n="experience">实习</span></div><h3 data-i18n="intern">软件开发实习生</h3><p class="timeline-org" data-i18n="internOrg">Guanghong · 零售业务</p><p class="timeline-detail" data-i18n="internDetail">独立开发并部署微信小程序，支持商品浏览、线上下单及 Python 后端，集成 AI 客服并负责测试与维护。</p></article>
+        <article class="timeline-item"><div class="timeline-date"><span>2021.09 — 2025.06</span><span class="timeline-type" data-i18n="education">教育</span></div><h3 data-i18n="bachelors">计算机科学与技术学士</h3><p class="timeline-org" data-i18n="bachelorsOrg">中国地质大学（武汉）</p><p class="timeline-detail">B.Sc. Computer Science and Technology</p></article></div>
+      </div>
+      <article class="research-card"><div class="research-icon" aria-hidden="true">↗</div><div class="research-copy"><p class="eyebrow" data-i18n="researchEyebrow">本科毕业论文 / 2024.12 — 2025.06</p><h3 data-i18n="researchTitle">先验增强的图像复原</h3><p data-i18n="researchDescription">设计 PriAda-U-Net 去雾与 GRS-U-Net 去雨模型，将暗通道和梯度图先验融入网络，通过自适应损失加权、对比实验与消融研究评估模型。</p></div><div class="research-metric"><strong>34.13 <span>dB</span></strong><span>PSNR · <span data-i18n="dehazing">图像去雾</span></span><small data-i18n="cvResult">CV 所列实验结果 · SSIM 0.8325</small></div></article>
+      <div class="skills-grid"><div><p class="mono-caption">01 / AI & VISION</p><h3 data-i18n="skillsVision">从模型到评估</h3><p>PyTorch · scikit-learn · OpenCV<br><span data-i18n="visionSkills">目标检测 · 图像复原 · 特征提取</span></p></div><div><p class="mono-caption">02 / SOFTWARE</p><h3 data-i18n="skillsSoftware">从后端到界面</h3><p>Python · JavaScript · React · FastAPI<br>REST · SSE · SQLite · Git · pytest</p></div><div><p class="mono-caption">03 / EMBEDDED</p><h3 data-i18n="skillsEmbedded">从代码到设备</h3><p>C / C++ · ESP32-S3 · FreeRTOS<br><span data-i18n="embeddedSkills">摄像头接入 · GPIO · 软硬件集成</span></p></div></div>
+      <div class="languages"><span class="mono-caption" data-i18n="languagesLabel">语言</span><p><span data-i18n="chinese">中文 / 母语</span><span data-i18n="english">English / 流利</span><span data-i18n="german">Deutsch / 基础</span></p></div>
+    </div></section>
+
+    <section id="contact" class="contact-section container" aria-labelledby="contact-title"><div><p class="eyebrow" data-i18n="contactIndex">03 / 保持联系</p><h2 id="contact-title" data-i18n-html="contactTitle">下一个想法，<br><span class="serif-accent">一起构建。</span></h2><p data-i18n="contactDescription">欢迎交流计算机视觉、AI 应用与软件开发。</p><a class="email-link" href="mailto:yingchao.li@fau.de">yingchao.li@fau.de <span>↗</span></a></div><div class="contact-aside"><span class="contact-spark" aria-hidden="true">✳</span><div class="contact-links"><a href="https://github.com/yingchao-li" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.linkedin.com/in/yingchao-li-722071397/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a><a href="assets/Yingchao-Li-CV.pdf" download><span data-i18n="downloadCv">下载 CV</span><span>↓</span></a></div></div></section>
+  </main>
+  <footer class="container"><p>© 2026 Yingchao Li</p><span data-i18n="footer">以好奇心为起点，以作品作答。</span><a href="#" data-i18n="backTop">返回顶部 ↑</a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="关闭项目详情" data-aria="closeAria">×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
